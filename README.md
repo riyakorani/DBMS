@@ -6,7 +6,7 @@ A complete DBMS learning repository covering fundamentals to advanced database c
 
 ## 👩‍💻 Author
 
-* GitHub: @riyakorani
+* GitHub: riyakorani
 * Repository: # 🚀 DBMS For FAANG
 
 A complete DBMS learning repository covering fundamentals to advanced database concepts for placements, interviews, and backend engineering.
