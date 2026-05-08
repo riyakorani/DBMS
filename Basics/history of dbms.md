@@ -247,3 +247,91 @@ Q6. What is modern DBMS?
 ------------------------------------------------------------
 
 DBMS evolved from File System → Hierarchical → Network → Relational → Modern (NoSQL + Cloud + Distributed) to solve data storage and scalability problems.
+
+
+
+# History of DBMS
+
+## 1950s – Magnetic Tapes
+- Data stored using magnetic tapes
+- Sequential data access
+- Slow processing speed
+- No proper DBMS available
+
+### Features
+- Sequential storage
+- Difficult data retrieval
+- Limited storage efficiency
+
+---
+
+## 1960s – Tapes and Hard Disks
+- Introduction of hard disks
+- Early database systems developed
+- Hierarchical and network database models introduced
+
+### Features
+- Faster data access
+- Improved storage methods
+- Beginning of DBMS technology
+
+---
+
+## 1970s – Hard Disks & Data Abstraction
+- Data abstraction concepts introduced
+- Relational Database Model developed by Edgar F. Codd
+- Data stored in tables (rows and columns)
+
+### Features
+- Relational databases
+- Data independence
+- Structured data management
+
+---
+
+## 1980s – Relational Model, Parallel & Distributed DB
+- Relational DBMS became widely popular
+- Distributed and parallel databases introduced
+- Better multi-user support
+
+### Features
+- Distributed processing
+- Concurrency control
+- Improved performance
+
+---
+
+## 1990s – SQL, WWW, Parallel DB
+- SQL became the standard query language
+- Growth of World Wide Web (WWW)
+- Databases integrated with web applications
+
+### Features
+- Web databases
+- Parallel database systems
+- High scalability
+
+---
+
+## 2000s – XML & Auto Administration
+- XML support added in databases
+- Self-managing database systems introduced
+- Growth of enterprise and cloud databases
+
+### Features
+- XML data handling
+- Automated backup and tuning
+- Enhanced security and recovery
+
+---
+
+# Summary Table
+
+| Decade | Main Development |
+|--------|------------------|
+| 1950s | Magnetic tapes |
+| 1960s | Hard disks and early DBMS |
+| 1970s | Relational model and data abstraction |
+| 1980s | Distributed and parallel DB |
+| 1990s | SQL and web databases |
+| 2000s | XML and auto-administration |
