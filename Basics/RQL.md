@@ -1771,3 +1771,276 @@ Used to:
 - perform set-based queries
 
 
+# 🔥 Union Operation (∪) — Relational Algebra
+
+*(FAANG + Interview + GitHub Ready Notes)*
+
+---
+
+# 📘 What is Union Operation?
+
+Union operation is used to:
+# ✅ Combine tuples from two relations (tables)
+
+It returns:
+- all rows from both tables
+- removes duplicates
+
+---
+
+# 🧠 Simple Definition
+
+> Union combines two compatible relations into one relation.
+
+---
+
+# 🔥 Symbol
+
+# ∪ (Union)
+
+---
+
+# 📌 Syntax
+
+```text
+R ∪ S
+```
+
+Where:
+- R = Relation 1
+- S = Relation 2
+
+---
+
+# ⚠️ Condition: Union Compatibility
+
+Union works only when:
+
+| Condition | Meaning |
+|---|---|
+| Same number of attributes | Same columns |
+| Same domain | Same data types |
+| Same order | Matching structure |
+
+---
+
+# 🧠 Example
+
+## Table 1: Students_A
+
+| ID | Name |
+|---|---|
+| 1 | Riya |
+| 2 | Aman |
+
+---
+
+## Table 2: Students_B
+
+| ID | Name |
+|---|---|
+| 2 | Aman |
+| 3 | Neha |
+
+---
+
+## Union Operation
+
+```text
+Students_A ∪ Students_B
+```
+
+---
+
+## Output
+
+| ID | Name |
+|---|---|
+| 1 | Riya |
+| 2 | Aman |
+| 3 | Neha |
+
+---
+
+# 🔥 SQL Equivalent
+
+```sql
+SELECT * FROM Students_A
+UNION
+SELECT * FROM Students_B;
+```
+
+---
+
+# ⚠️ Important Note
+
+- UNION removes duplicates automatically
+- To keep duplicates (SQL concept) → UNION ALL
+
+---
+
+# 🔥 Properties of Union
+
+| Property | Meaning |
+|---|---|
+| Commutative | R ∪ S = S ∪ R |
+| Associative | (R ∪ S) ∪ T = R ∪ (S ∪ T) |
+| Idempotent | R ∪ R = R |
+
+---
+
+# 🧠 Explanation
+
+## Commutative
+
+Order doesn't matter:
+```text
+R ∪ S = S ∪ R
+```
+
+---
+
+## Associative
+
+Grouping doesn't matter:
+```text
+(R ∪ S) ∪ T = R ∪ (S ∪ T)
+```
+
+---
+
+## Idempotent
+
+```text
+R ∪ R = R
+```
+
+---
+
+# 🔥 Union vs Other Operations
+
+| Operation | Meaning |
+|---|---|
+| Selection (σ) | Filters rows |
+| Projection (π) | Filters columns |
+| Union (∪) | Combines relations |
+
+---
+
+# 🧠 Real-Life Example
+
+Two student lists:
+- DBMS students
+- CN students
+
+Union = all students from both courses.
+
+---
+
+# 🔥 FAANG Interview Questions
+
+---
+
+## Q1. What is Union in relational algebra?
+
+### ✅ Answer
+Union combines tuples from two union-compatible relations and removes duplicates.
+
+---
+
+## Q2. What is union compatibility?
+
+### ✅ Answer
+Relations must have same number of attributes and same data types.
+
+---
+
+## Q3. Does union remove duplicates?
+
+### ✅ Answer
+Yes.
+
+---
+
+## Q4. Is union a binary operation?
+
+### ✅ Answer
+Yes.
+
+---
+
+## Q5. What is difference between UNION and UNION ALL?
+
+### ✅ Answer
+- UNION → removes duplicates  
+- UNION ALL → keeps duplicates (SQL concept)
+
+---
+
+# 🔥 Practice Questions
+
+---
+
+## 1️⃣ What does R ∪ S return?
+
+### ✅ Answer
+All tuples from R and S without duplicates.
+
+---
+
+## 2️⃣ Can union work on different schemas?
+
+### ❌ Answer
+No.
+
+---
+
+## 3️⃣ Is union commutative?
+
+### ✅ Answer
+Yes.
+
+---
+
+## 4️⃣ What is required for union?
+
+### ✅ Answer
+Union compatibility.
+
+---
+
+# 🧠 Microsoft-Level Insight
+
+Union is used in:
+- merging distributed databases
+- combining query results
+- multi-server data aggregation
+
+Example:
+- users from India server
+- users from US server  
+→ merged using UNION logic
+
+---
+
+# 🧠 Quick Revision Table
+
+| Concept | Remember |
+|---|---|
+| Union | Combines tables |
+| Symbol | ∪ |
+| Type | Binary operation |
+| Duplicate removal | Yes |
+| Requirement | Union compatible |
+| Output | Single relation |
+
+---
+
+# 🚀 Next Topic
+
+# 🔥 Set Difference (−)
+
+Used to:
+- find missing records
+- compare datasets
+- exclude tuples from one relation
