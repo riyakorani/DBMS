@@ -2617,3 +2617,254 @@ Used for:
 - renaming tables
 - renaming attributes
 - improving query readability
+
+# 🔥 Rename Operation (ρ) — Relational Algebra
+
+*(FAANG + Interview + GitHub Ready Notes)*
+
+---
+
+# 📘 What is Rename Operation?
+
+Rename operation is used to:
+# ✅ Change the name of a relation (table) or its attributes
+
+---
+
+# 🧠 Simple Definition
+
+> Rename operation is used to assign a new name to a relation or its columns without changing data.
+
+---
+
+# 🔥 Symbol
+
+# ρ (Rho)
+
+---
+
+# 📌 Syntax
+
+## 1️⃣ Rename Relation
+
+```text
+ρNewName(R)
+```
+
+## 2️⃣ Rename Relation + Attributes
+
+```text
+ρNewName(A1, A2, A3)(R)
+```
+
+---
+
+# 🧠 Meaning
+
+| Part | Meaning |
+|---|---|
+| ρ | Rename operation |
+| NewName | New table name |
+| A1, A2... | New attribute names |
+| R | Original relation |
+
+---
+
+# 🔥 Example Table
+
+## Students
+
+| ID | Name | Marks |
+|---|---|---|
+| 1 | Riya | 90 |
+| 2 | Aman | 70 |
+
+---
+
+# 🔥 Example 1 — Rename Relation
+
+```text
+ρS(Students)
+```
+
+### Meaning:
+Students table is renamed as **S**
+
+---
+
+# 🔥 Example 2 — Rename Attributes
+
+```text
+ρS(SID, SName, SMarks)(Students)
+```
+
+---
+
+## Output Concept
+
+| SID | SName | SMarks |
+|---|---|---|
+| 1 | Riya | 90 |
+| 2 | Aman | 70 |
+
+---
+
+# 🔥 Example 3 — Self Join Use Case
+
+```text
+ρS1(Students) × ρS2(Students)
+```
+
+Used when:
+# ✅ same table is used twice
+
+---
+
+# 🧠 Why Rename is Needed?
+
+✔ Avoid ambiguity  
+✔ Support self joins  
+✔ Improve readability  
+✔ Help in complex queries  
+
+---
+
+# 🔥 SQL Equivalent
+
+```sql
+SELECT *
+FROM Students AS S;
+```
+
+---
+
+# 🔥 Key Properties
+
+| Property | Meaning |
+|---|---|
+| Unary operation | Works on one relation |
+| No data change | Only name changes |
+| Logical operation | Not physical storage change |
+| Useful in joins | Especially self join |
+
+---
+
+# 🧠 Real-Life Analogy
+
+Same person playing two roles:
+- Student
+- Class Representative
+
+Rename helps distinguish roles.
+
+---
+
+# 🎯 FAANG Interview Questions
+
+---
+
+## Q1. What is rename operation?
+
+### ✅ Answer
+It changes the name of a relation or its attributes without changing data.
+
+---
+
+## Q2. Does rename change data?
+
+### ❌ Answer
+No, only names change.
+
+---
+
+## Q3. Why is rename used?
+
+### ✅ Answer
+To avoid ambiguity and support self joins.
+
+---
+
+## Q4. Is rename unary or binary?
+
+### ✅ Answer
+Unary operation.
+
+---
+
+## Q5. What is symbol of rename?
+
+### ✅ Answer
+ρ (Rho)
+
+---
+
+# 🔥 Practice Questions
+
+---
+
+## 1️⃣ Rename Students as S
+
+### ✅ Answer
+```text
+ρS(Students)
+```
+
+---
+
+## 2️⃣ Why is rename important in self join?
+
+### ✅ Answer
+To differentiate same table instances.
+
+---
+
+## 3️⃣ Does rename affect schema or data?
+
+### ❌ Answer
+Only schema name, not data.
+
+---
+
+## 4️⃣ Is rename physical operation?
+
+### ❌ Answer
+No, it is logical.
+
+---
+
+# 🧠 Microsoft-Level Insight
+
+Rename is heavily used in:
+- self joins
+- query optimization
+- query parsing in DBMS engines
+
+Example:
+- employee-manager relationship in same table
+
+---
+
+# 🧠 Quick Revision Table
+
+| Concept | Remember |
+|---|---|
+| Rename | Changes name only |
+| Symbol | ρ |
+| Type | Unary |
+| Data change | No |
+| Use | Self joins, clarity |
+
+---
+
+# 🚀 Next Topic
+
+# 🔥 JOIN Operations (Very Important)
+
+We will cover:
+- Inner Join  
+- Theta Join  
+- Natural Join  
+- Equi Join  
+- Outer Join  
+- FAANG interview questions  
+- real-world scenarios  
