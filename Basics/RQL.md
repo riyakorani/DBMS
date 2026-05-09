@@ -3222,6 +3222,105 @@ Q2. Does it modify original table?
 Q3. Why is it used?  
 ✔ To store intermediate results  
 
+# 🔥 Natural Join (⨝) — Relational Algebra
+
+---
+
+# 📘 Definition
+Natural Join is used to:
+# ✅ combine two relations automatically based on same attribute names
+
+---
+
+# 🔥 Symbol
+⨝
+
+---
+
+# 📌 Syntax
+
+R ⨝ S
+
+---
+
+# ⚠️ Condition
+✔ Must have at least one common attribute name  
+✔ Matching values are joined automatically  
+✔ Duplicate columns are removed  
+
+---
+
+# 🧠 Example
+
+## Students
+
+| ID | Name |
+|---|---|
+| 1 | Riya |
+| 2 | Aman |
+
+---
+
+## Marks
+
+| ID | Marks |
+|---|---|
+| 1 | 90 |
+| 2 | 80 |
+
+---
+
+# 🔥 Operation
+
+Students ⨝ Marks
+
+---
+
+# 📌 Output
+
+| ID | Name | Marks |
+|---|---|---|
+| 1 | Riya | 90 |
+| 2 | Aman | 80 |
+
+---
+
+# 🧠 What happens internally?
+
+✔ Matches rows using common column (ID)  
+✔ Combines matching tuples  
+✔ Removes duplicate column (ID appears once)
+
+---
+
+# 🔥 SQL Equivalent
+
+SELECT *  
+FROM Students  
+NATURAL JOIN Marks;
+
+---
+
+# 🔥 Key Features
+
+- Binary operation  
+- Auto matching on same attribute names  
+- Removes duplicate columns  
+- Very commonly used in real DBMS  
+
+---
+
+# 🎯 Interview Questions
+
+Q1. What is Natural Join?  
+✔ Join based on same attribute names automatically  
+
+Q2. Does it remove duplicates?  
+✔ Yes  
+
+Q3. Difference from Equi Join?  
+✔ Natural join auto matches columns, equi join uses explicit condition  
+
 
 
 
