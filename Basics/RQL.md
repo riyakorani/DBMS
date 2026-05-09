@@ -3435,6 +3435,153 @@ Q3. Is it easy or complex operation?
 ✔ Complex / advanced RA operation  
 
 
+# 🔥 Outer Join — Relational Algebra
+
+---
+
+# 📘 Definition
+Outer Join is used to:
+# ✅ include unmatched tuples along with matched tuples
+
+👉 Unlike normal join, it does NOT drop unmatched rows.
+
+---
+
+# 🔥 Types of Outer Join
+
+| Type | Meaning |
+|---|---|
+| Left Outer Join (⟕) | All rows from left + matched from right |
+| Right Outer Join (⟖) | All rows from right + matched from left |
+| Full Outer Join (⟗) | All rows from both tables |
+
+---
+
+# 🧠 Example Tables
+
+## Students
+
+| ID | Name |
+|---|---|
+| 1 | Riya |
+| 2 | Aman |
+| 3 | Neha |
+
+---
+
+## Marks
+
+| ID | Marks |
+|---|---|
+| 1 | 90 |
+| 2 | 80 |
+
+---
+
+# 🔥 1️⃣ Left Outer Join
+
+```text id="l1"
+Students ⟕ Marks
+```
+
+---
+
+## 📌 Output
+
+| ID | Name | Marks |
+|---|---|---|
+| 1 | Riya | 90 |
+| 2 | Aman | 80 |
+| 3 | Neha | NULL |
+
+---
+
+# 🧠 Meaning
+✔ Keeps all students  
+✔ Missing match → NULL  
+
+---
+
+# 🔥 2️⃣ Right Outer Join
+
+```text id="l2"
+Students ⟖ Marks
+```
+
+---
+
+## 📌 Output
+
+| ID | Name | Marks |
+|---|---|---|
+| 1 | Riya | 90 |
+| 2 | Aman | 80 |
+
+---
+
+# 🧠 Meaning
+✔ Keeps all rows from Marks  
+✔ Missing students → NULL  
+
+---
+
+# 🔥 3️⃣ Full Outer Join
+
+```text id="l3"
+Students ⟗ Marks
+```
+
+---
+
+## 📌 Output
+
+| ID | Name | Marks |
+|---|---|---|
+| 1 | Riya | 90 |
+| 2 | Aman | 80 |
+| 3 | Neha | NULL |
+
+---
+
+# 🔥 Key Features
+
+- Binary operation  
+- Preserves unmatched tuples  
+- Missing values → NULL  
+- Used in real-world analytics  
+
+---
+
+# 🔥 SQL Equivalent
+
+```sql id="l4"
+LEFT JOIN
+RIGHT JOIN
+FULL OUTER JOIN
+```
+
+---
+
+# 🧠 Real-Life Use Case
+
+✔ Employee without department  
+✔ Students without marks  
+✔ Products without orders  
+
+---
+
+# 🎯 Interview Questions
+
+Q1. What is outer join?  
+✔ Join that keeps unmatched tuples  
+
+Q2. Types of outer join?  
+✔ Left, Right, Full  
+
+Q3. What happens to unmatched rows?  
+✔ They get NULL values  
+
+
 
 
 
