@@ -3322,6 +3322,118 @@ Q3. Difference from Equi Join?
 ✔ Natural join auto matches columns, equi join uses explicit condition  
 
 
+# 🔥 Division Operator (÷) — Relational Algebra
+
+---
+
+# 📘 Definition
+Division is used to:
+# ✅ find tuples that are related to ALL values of another relation
+
+👉 It is used for:
+# 🔥 “FOR ALL” type queries
+
+---
+
+# 🔥 Symbol
+÷
+
+---
+
+# 📌 General Idea
+
+If:
+- R(A, B)
+- S(B)
+
+Then:
+
+R ÷ S returns:
+# ✅ all A values such that A is related to every B in S
+
+---
+
+# 🧠 Example Scenario
+
+## Enrollments (R)
+
+| Student | Course |
+|---|---|
+| Riya | DBMS |
+| Riya | CN |
+| Aman | DBMS |
+| Aman | CN |
+| Neha | DBMS |
+
+---
+
+## Required Courses (S)
+
+| Course |
+|---|
+| DBMS |
+| CN |
+
+---
+
+# 🔥 Operation
+
+R ÷ S
+
+---
+
+# 🧠 Step-by-step logic
+
+Check each student:
+
+- Riya → DBMS + CN ✔ (ALL courses)
+- Aman → DBMS + CN ✔ (ALL courses)
+- Neha → only DBMS ❌ (missing CN)
+
+---
+
+# 📌 Output
+
+| Student |
+|---|
+| Riya |
+| Aman |
+
+---
+
+# 🔥 Real-Life Meaning
+
+✔ Students who took ALL subjects  
+✔ Employees who worked on ALL projects  
+✔ Users who bought ALL required items  
+
+---
+
+# 🔥 SQL Equivalent (Conceptual)
+
+Uses GROUP BY + HAVING logic
+
+---
+
+# 🔥 Key Properties
+
+- Binary operation  
+- Used for universal conditions (“FOR ALL”)  
+- One of the hardest RA operations  
+
+---
+
+# 🎯 Interview Questions
+
+Q1. What is division operator used for?  
+✔ FOR ALL type queries  
+
+Q2. What does R ÷ S return?  
+✔ A values related to all B values in S  
+
+Q3. Is it easy or complex operation?  
+✔ Complex / advanced RA operation  
+
 
 
 
