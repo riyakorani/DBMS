@@ -2969,6 +2969,96 @@ We will cover:
 👉 RA = set of operations on tables that return tables and define HOW to retrieve data efficiently.
 
 
+# Additional operations : 
+
+# 🔥 Set Intersection (∩) — Relational Algebra
+
+---
+
+# 📘 Definition
+Set Intersection returns:
+# ✅ common tuples present in both relations
+
+---
+
+# 🔥 Symbol
+R ∩ S
+
+---
+
+# ⚠️ Condition
+✔ Relations must be union compatible  
+- same number of attributes  
+- same data types  
+- same structure  
+
+---
+
+# 🧠 Example
+
+A:
+
+| ID | Name |
+|---|---|
+| 1 | Riya |
+| 2 | Aman |
+| 3 | Neha |
+
+B:
+
+| ID | Name |
+|---|---|
+| 2 | Aman |
+| 3 | Neha |
+| 4 | Kunal |
+
+---
+
+# 🔥 Operation
+A ∩ B
+
+---
+
+# 📌 Output
+
+| ID | Name |
+|---|---|
+| 2 | Aman |
+| 3 | Neha |
+
+---
+
+# 🔥 Properties
+- Commutative: R ∩ S = S ∩ R  
+- Binary operation  
+- Requires union compatibility  
+
+---
+
+# 🔥 SQL Equivalent
+SELECT * FROM A  
+INTERSECT  
+SELECT * FROM B;
+
+---
+
+# 🎯 Interview Questions
+
+Q1. What does intersection do?  
+✔ Returns common tuples  
+
+Q2. Is it commutative?  
+✔ Yes  
+
+Q3. Condition for intersection?  
+✔ Union compatibility  
+
+
+
+
+
+
+
 
 
 
