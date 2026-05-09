@@ -3054,6 +3054,175 @@ Q3. Condition for intersection?
 ✔ Union compatibility  
 
 
+# 🔥 Assignment Operation (←) — Relational Algebra
+
+---
+
+# 📘 Definition
+Assignment operation is used to:
+# ✅ store the result of a relational expression into a temporary relation
+
+---
+
+# 🔥 Symbol
+←
+
+---
+
+# 📌 Syntax
+
+T ← Expression
+
+---
+
+# 🧠 Meaning
+- T = temporary relation
+- Expression = any relational algebra operation result
+
+---
+
+# 🧠 Example 1
+
+T ← σ Marks > 80 (Students)
+
+---
+
+# 📌 Meaning
+✔ Filter students with Marks > 80  
+✔ Store result in T  
+
+---
+
+# 🧠 Example 2
+
+A ← π Name (Students)
+
+---
+
+# 📌 Meaning
+✔ Store only Name column from Students into A  
+
+---
+
+# 🧠 Why used?
+
+✔ Break complex queries  
+✔ Store intermediate results  
+✔ Improve readability  
+✔ Used in query processing internally  
+
+---
+
+# 🔥 Key Property
+
+- Does NOT change original relation  
+- Only creates temporary result  
+
+---
+
+# 🔥 Real DBMS Usage
+
+DBMS internally uses assignment for:
+✔ query optimization  
+✔ intermediate results storage  
+
+---
+
+# 🎯 Interview Questions
+
+Q1. What is assignment operation?  
+✔ Stores result of expression into a relation  
+
+Q2. Does it modify original table?  
+✔ No  
+
+Q3. Why is it used?  
+✔ To store intermediate results  # 🔥 Assignment Operation (←) — Relational Algebra
+
+---
+
+# 📘 Definition
+Assignment operation is used to:
+# ✅ store the result of a relational expression into a temporary relation
+
+---
+
+# 🔥 Symbol
+←
+
+---
+
+# 📌 Syntax
+
+T ← Expression
+
+---
+
+# 🧠 Meaning
+- T = temporary relation
+- Expression = any relational algebra operation result
+
+---
+
+# 🧠 Example 1
+
+T ← σ Marks > 80 (Students)
+
+---
+
+# 📌 Meaning
+✔ Filter students with Marks > 80  
+✔ Store result in T  
+
+---
+
+# 🧠 Example 2
+
+A ← π Name (Students)
+
+---
+
+# 📌 Meaning
+✔ Store only Name column from Students into A  
+
+---
+
+# 🧠 Why used?
+
+✔ Break complex queries  
+✔ Store intermediate results  
+✔ Improve readability  
+✔ Used in query processing internally  
+
+---
+
+# 🔥 Key Property
+
+- Does NOT change original relation  
+- Only creates temporary result  
+
+---
+
+# 🔥 Real DBMS Usage
+
+DBMS internally uses assignment for:
+✔ query optimization  
+✔ intermediate results storage  
+
+---
+
+# 🎯 Interview Questions
+
+Q1. What is assignment operation?  
+✔ Stores result of expression into a relation  
+
+Q2. Does it modify original table?  
+✔ No  
+
+Q3. Why is it used?  
+✔ To store intermediate results  
+
+
 
 
 
