@@ -2870,6 +2870,105 @@ We will cover:
 - real-world scenarios  
 
 
+# 📘 Relational Algebra (RA) — Quick Revision Table
+
+*(FAANG + Interview Cheat Sheet)*
+
+---
+
+# 🔥 Core Idea
+
+| Concept | Meaning |
+|---|---|
+| Relational Algebra | Procedural query language for DBMS |
+| Works on | Relations (tables) |
+| Output | Always a relation |
+| Nature | Procedural (HOW to retrieve data) |
+| Basis | Set Theory |
+
+---
+
+# 🔥 Basic Operations
+
+| Operation | Symbol | Purpose | Type |
+|---|---|---|---|
+| Selection | σ | Filters rows | Unary |
+| Projection | π | Filters columns | Unary |
+| Union | ∪ | Combines tables | Binary |
+| Set Difference | − | Removes common tuples | Binary |
+| Cartesian Product | × | All combinations | Binary |
+| Rename | ρ | Renames table/attributes | Unary |
+
+---
+
+# 🔥 Operation Summary
+
+| Operation | Works On | Result |
+|---|---|---|
+| σ (Selection) | Rows | Filtered rows |
+| π (Projection) | Columns | Selected attributes |
+| ∪ (Union) | Two tables | Combined tuples |
+| − (Difference) | Two tables | R - S tuples |
+| × (Product) | Two tables | All combinations |
+| ρ (Rename) | One table | Renamed relation |
+
+---
+
+# 🔥 Important Properties
+
+| Property | Meaning |
+|---|---|
+| Closure | Output is always a relation |
+| Duplicate Handling | Removed in set-based operations |
+| Union Compatibility | Required for ∪ and − |
+| Not Commutative | Set Difference |
+| Very Expensive | Cartesian Product |
+
+---
+
+# 🔥 SQL Mapping
+
+| RA Operation | SQL Equivalent |
+|---|---|
+| σ | WHERE |
+| π | SELECT columns |
+| ∪ | UNION |
+| − | EXCEPT |
+| × | FROM A, B |
+| ρ | AS (alias) |
+
+---
+
+# 🔥 Quick Formulas
+
+| Operation | Formula |
+|---|---|
+| Selection | σcondition(R) |
+| Projection | πattributes(R) |
+| Union | R ∪ S |
+| Difference | R − S |
+| Cartesian Product | R × S |
+| Rename | ρnew(R) |
+
+---
+
+# 🔥 FAANG Interview Points
+
+| Question | Answer |
+|---|---|
+| Is RA procedural? | Yes |
+| Does RA change data? | No |
+| Output type? | Relation |
+| Most expensive operation? | Cartesian Product |
+| Required for Union? | Union compatibility |
+
+---
+
+# 🚀 One-Line Revision
+
+👉 RA = set of operations on tables that return tables and define HOW to retrieve data efficiently.
+
+
 
 
 
