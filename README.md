@@ -16,12 +16,6 @@ A complete DBMS learning repository covering fundamentals to advanced database c
 ---
 
 
-## 👩‍💻 Author
-
-* GitHub: @riyakorani
-* Repository: https://github.com/riyakorani/DBMS
-
----
 
 # 📚 Topics Covered
 
