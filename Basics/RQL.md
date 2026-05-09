@@ -2044,3 +2044,324 @@ Used to:
 - find missing records
 - compare datasets
 - exclude tuples from one relation
+
+# 🔥 Set Difference Operation (−)
+
+*(FAANG + Interview + GitHub Ready Notes)*
+
+---
+
+# 📘 What is Set Difference?
+
+Set Difference operation is used to:
+# ✅ Find tuples present in one relation but NOT in another relation
+
+---
+
+# 🧠 Simple Definition
+
+> Set Difference returns records in R that are not in S.
+
+---
+
+# 🔥 Symbol
+
+# − (Minus)
+
+---
+
+# 📌 Syntax
+
+```text
+R − S
+```
+
+Meaning:
+- Take relation R
+- Remove all tuples that are present in S
+
+---
+
+# ⚠️ Condition (Very Important)
+
+✔ Both relations must be:
+# ✅ Union compatible
+
+Meaning:
+- same number of attributes  
+- same data types  
+- same structure  
+
+---
+
+# 🧠 Example Tables
+
+## A
+
+| ID | Name |
+|---|---|
+| 1 | Riya |
+| 2 | Aman |
+| 3 | Neha |
+
+---
+
+## B
+
+| ID | Name |
+|---|---|
+| 2 | Aman |
+| 4 | Kunal |
+
+---
+
+# 🔥 Operation
+
+```text
+A − B
+```
+
+---
+
+# 📌 Step-by-Step Result
+
+From A:
+- Riya → not in B → keep
+- Aman → in B → remove
+- Neha → not in B → keep
+
+---
+
+# ✅ Output
+
+| ID | Name |
+|---|---|
+| 1 | Riya |
+| 3 | Neha |
+
+---
+
+# 🔥 SQL Equivalent
+
+```sql
+SELECT * FROM A
+EXCEPT
+SELECT * FROM B;
+```
+
+---
+
+# 🔥 Example 2 (Real Scenario)
+
+## Problem
+
+Find students enrolled in DBMS but NOT in CN.
+
+---
+
+## DBMS Table
+
+| Name |
+|---|
+| Riya |
+| Aman |
+| Neha |
+
+---
+
+## CN Table
+
+| Name |
+|---|
+| Aman |
+| Kunal |
+
+---
+
+## Relational Algebra
+
+```text
+DBMS − CN
+```
+
+---
+
+## Output
+
+| Name |
+|---|
+| Riya |
+| Neha |
+
+---
+
+# 🔥 Properties of Set Difference
+
+| Property | Meaning |
+|---|---|
+| Not Commutative | R − S ≠ S − R |
+| Not Associative | Order matters |
+| Binary Operation | Works on two relations |
+
+---
+
+# 🧠 Important Insight
+
+## ❌ Not Commutative
+
+```text
+R − S ≠ S − R
+```
+
+Example:
+- R − S = {Riya, Neha}
+- S − R = {Kunal}
+
+Different results.
+
+---
+
+# 🔥 Set Difference vs Union
+
+| Operation | Meaning |
+|---|---|
+| Union (∪) | Combines all tuples |
+| Difference (−) | Removes matching tuples |
+
+---
+
+# 🔥 Set Difference vs Selection
+
+| Operation | Meaning |
+|---|---|
+| Selection (σ) | Filters rows using condition |
+| Difference (−) | Removes tuples present in another relation |
+
+---
+
+# 🧠 Real-Life Analogy
+
+- A = all students in class  
+- B = students who left  
+
+A − B =
+# ✅ currently active students
+
+---
+
+# 🔥 Why Union Compatibility is Needed?
+
+Because DBMS cannot compare:
+- different columns
+- different data types
+
+---
+
+# 🎯 FAANG Interview Questions
+
+---
+
+## Q1. What is Set Difference?
+
+### ✅ Answer
+It returns tuples in R that are not in S.
+
+---
+
+## Q2. Is set difference commutative?
+
+### ❌ Answer
+No.
+
+---
+
+## Q3. What is required for set difference?
+
+### ✅ Answer
+Union compatibility.
+
+---
+
+## Q4. What is SQL equivalent?
+
+### ✅ Answer
+EXCEPT
+
+---
+
+## Q5. What does R − S return?
+
+### ✅ Answer
+All tuples in R not present in S.
+
+---
+
+# 🔥 Practice Questions
+
+---
+
+## 1️⃣ Find A − B result.
+
+### ✅ Answer
+Tuples in A not present in B.
+
+---
+
+## 2️⃣ Is R − S same as S − R?
+
+### ❌ Answer
+No.
+
+---
+
+## 3️⃣ Is set difference unary or binary?
+
+### ✅ Answer
+Binary.
+
+---
+
+## 4️⃣ What does it remove?
+
+### ✅ Answer
+Common tuples between relations.
+
+---
+
+# 🧠 Microsoft-Level Insight
+
+Set difference is used in:
+- filtering users
+- access control systems
+- subscription management
+- recommendation filtering
+
+Example:
+- all users
+- minus premium users  
+→ free users list
+
+---
+
+# 🧠 Quick Revision Table
+
+| Concept | Remember |
+|---|---|
+| Set Difference | Removes common tuples |
+| Symbol | − |
+| Type | Binary |
+| Commutative | No |
+| Output | R − S |
+
+---
+
+# 🚀 Next Topic
+
+# 🔥 Cartesian Product (×)
+
+We will learn:
+- row combinations
+- huge output growth
+- join foundation
+- interview questions
+- optimization problems
