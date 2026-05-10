@@ -3898,6 +3898,293 @@ Used in:
 
 ---
 
+# 🔥 Tuple Relational Calculus (TRC) — Deep Notes
+
+*(FAANG + Interview Ready)*
+
+---
+
+# 📘 Definition
+Tuple Relational Calculus (TRC) is:
+# ✅ a non-procedural query language where variables represent tuples (rows)
+
+---
+
+# 🔥 Key Idea
+
+TRC specifies:
+# ✅ WHAT data is needed
+NOT how to retrieve it.
+
+---
+
+# 🔥 General Syntax
+
+```text
+{ t | condition }
+```
+
+---
+
+# 🧠 Meaning
+
+| Part | Meaning |
+|---|---|
+| t | tuple variable |
+| condition | logical formula |
+| {} | result set |
+
+---
+
+# 🧠 Example
+
+Find students with marks > 80
+
+```text
+{ t | Students(t) ∧ t.Marks > 80 }
+```
+
+---
+
+# 📌 Output
+
+| ID | Name | Marks |
+|---|---|---|
+| 1 | Riya | 90 |
+| 3 | Neha | 85 |
+
+---
+
+# 🔥 Tuple Variables
+
+Tuple variables represent:
+# ✅ entire rows
+
+Example:
+
+```text
+Students(t)
+```
+
+Meaning:
+✔ t belongs to Students relation
+
+---
+
+# 🔥 Predicates
+
+Predicates are:
+# ✅ logical conditions
+
+Example:
+
+```text
+t.Marks > 80
+```
+
+---
+
+# 🔥 Logical Operators
+
+| Symbol | Meaning |
+|---|---|
+| ∧ | AND |
+| ∨ | OR |
+| ¬ | NOT |
+
+---
+
+# 🧠 Example — AND
+
+```text
+{ t | Students(t) ∧ t.Marks > 80 ∧ t.City = "Bhopal" }
+```
+
+---
+
+# 🧠 Example — OR
+
+```text
+{ t | Students(t) ∨ Teachers(t) }
+```
+
+---
+
+# 🧠 Example — NOT
+
+```text
+{ t | Students(t) ∧ ¬(t.Marks < 40) }
+```
+
+---
+
+# 🔥 Quantifiers (VERY IMPORTANT)
+
+---
+
+# 1️⃣ Existential Quantifier (∃)
+
+Meaning:
+# ✅ THERE EXISTS
+
+---
+
+# 🧠 Example
+
+```text
+{ t | ∃e (Enroll(e) ∧ e.Course = "DBMS" ∧ e.Student = t.Name) }
+```
+
+---
+
+# 📌 Meaning
+
+✔ there exists an enrollment  
+✔ where course = DBMS  
+
+---
+
+# 🔥 Intuition
+
+```text
+∃ = at least one exists
+```
+
+---
+
+# 2️⃣ Universal Quantifier (∀)
+
+Meaning:
+# ✅ FOR ALL
+
+---
+
+# 🧠 Used In
+
+✔ division-type queries  
+✔ all conditions must satisfy  
+
+---
+
+# 🔥 Intuition
+
+```text
+∀ = every condition must be true
+```
+
+---
+
+# 🔥 Free vs Bound Variables
+
+---
+
+# 🟢 Free Variable
+
+Appears outside quantifier.
+
+Example:
+
+```text
+{ t | Students(t) ∧ t.Marks > 80 }
+```
+
+✔ t is free variable
+
+---
+
+# 🔵 Bound Variable
+
+Controlled by quantifier.
+
+Example:
+
+```text
+∃e (Enroll(e))
+```
+
+✔ e is bound variable
+
+---
+
+# 🔥 Safe vs Unsafe Expressions
+
+---
+
+# 🟢 Safe Expression
+
+Produces finite valid result.
+
+Example:
+
+```text
+{ t | Students(t) ∧ t.Marks > 80 }
+```
+
+---
+
+# 🔴 Unsafe Expression
+
+Produces infinite/non-computable result.
+
+Example:
+
+```text
+{ t | ¬Students(t) }
+```
+
+---
+
+# 🔥 Why Safety Matters?
+
+DBMS must:
+# ✅ guarantee finite results
+
+---
+
+# 🔥 TRC vs Relational Algebra
+
+| Feature | TRC | Relational Algebra |
+|---|---|---|
+| Nature | Non-procedural | Procedural |
+| Focus | WHAT | HOW |
+| Variables | Tuples | Relations |
+| Uses Logic | Yes | No |
+
+---
+
+# 🎯 FAANG Interview Questions
+
+Q1. What is TRC?  
+✔ Non-procedural query language using tuple variables
+
+---
+
+Q2. Difference between TRC and RA?  
+✔ TRC tells WHAT  
+✔ RA tells HOW
+
+---
+
+Q3. What does ∃ mean?  
+✔ There exists
+
+---
+
+Q4. What does ∀ mean?  
+✔ For all
+
+---
+
+Q5. Difference between free and bound variable?  
+✔ Free → outside quantifier  
+✔ Bound → inside quantifier
+
+---
+
+Q6. Why are unsafe expressions bad?  
+✔ Produce infinite/non-computable results
+
+
 
 
 
