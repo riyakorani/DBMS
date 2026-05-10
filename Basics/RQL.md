@@ -5144,3 +5144,475 @@ DRC:
 ✔ specifies WHAT data is needed  
 ✔ uses quantifiers for advanced logic  
 ✔ foundation of declarative query systems like SQL
+
+
+# 🔥 Relational Calculus — COMPLETE COMPARISON
+
+*(TRC + DRC + FAANG Interview + Practice Questions)*
+
+---
+
+# 📘 What is Relational Calculus?
+
+Relational Calculus is:
+# ✅ a non-procedural query language based on Predicate Logic
+
+It specifies:
+# ✅ WHAT data is needed
+NOT how to retrieve it.
+
+---
+
+# 🔥 Types of Relational Calculus
+
+| Type | Meaning |
+|---|---|
+| TRC (Tuple Relational Calculus) | variables represent tuples (rows) |
+| DRC (Domain Relational Calculus) | variables represent attribute values |
+
+---
+
+# 🔥 BIG IDEA
+
+| Relational Algebra | Relational Calculus |
+|---|---|
+| Procedural | Non-procedural |
+| HOW to retrieve | WHAT is needed |
+| Uses operations | Uses logic |
+
+---
+
+# 🔥 1️⃣ TRC vs DRC — COMPLETE COMPARISON
+
+| Feature | TRC | DRC |
+|---|---|---|
+| Full Form | Tuple Relational Calculus | Domain Relational Calculus |
+| Variables Represent | Entire tuples (rows) | Attribute values |
+| Orientation | Row-based | Value-based |
+| Syntax Complexity | Easier | More detailed |
+| Logic Level | Tuple logic | Domain/value logic |
+| Output Style | Tuple variable | Attribute list |
+| Example Variable | t | x, y, z |
+| Example | t.Marks | m |
+
+---
+
+# 🔥 Core Syntax Comparison
+
+---
+
+# 🟢 TRC Syntax
+
+```text
+{ t | condition }
+```
+
+Meaning:
+✔ return tuples t satisfying condition
+
+---
+
+# 🔵 DRC Syntax
+
+```text
+{ <x1,x2> | condition }
+```
+
+Meaning:
+✔ return attribute values satisfying condition
+
+---
+
+# 🔥 Example Relation
+
+## Students
+
+| ID | Name | Marks |
+|---|---|---|
+| 1 | Riya | 90 |
+| 2 | Aman | 70 |
+| 3 | Neha | 85 |
+
+---
+
+# 🔥 Example Query
+
+Find students with marks > 80
+
+---
+
+# 🟢 TRC
+
+```text
+{ t | Students(t) ∧ t.Marks > 80 }
+```
+
+---
+
+# 🔵 DRC
+
+```text
+{ <n> | ∃i ∃m (Students(i,n,m) ∧ m > 80) }
+```
+
+---
+
+# 🔥 Logical Operators
+
+| Symbol | Meaning |
+|---|---|
+| ∧ | AND |
+| ∨ | OR |
+| ¬ | NOT |
+| ⇒ | IMPLIES |
+| ⇔ | IF AND ONLY IF |
+
+---
+
+# 🔥 Quantifiers
+
+| Symbol | Meaning |
+|---|---|
+| ∃ | THERE EXISTS |
+| ∀ | FOR ALL |
+
+---
+
+# 🧠 Existential Quantifier Example
+
+```text
+∃x (condition)
+```
+
+Meaning:
+✔ at least one x exists
+
+---
+
+# 🧠 Universal Quantifier Example
+
+```text
+∀x (condition)
+```
+
+Meaning:
+✔ condition true for every x
+
+---
+
+# 🔥 Free vs Bound Variables
+
+---
+
+# 🟢 Free Variable
+
+Appears in output.
+
+Example:
+
+```text
+{ t | Students(t) ∧ t.Marks > 80 }
+```
+
+✔ t is free variable
+
+---
+
+# 🔵 Bound Variable
+
+Controlled by quantifier.
+
+Example:
+
+```text
+∃m (...)
+```
+
+✔ m is bound variable
+
+---
+
+# 🔥 Safe vs Unsafe Expressions
+
+---
+
+# 🟢 Safe Expression
+
+Produces:
+# ✅ finite computable result
+
+Example:
+
+```text
+{ t | Students(t) ∧ t.Marks > 80 }
+```
+
+---
+
+# 🔴 Unsafe Expression
+
+Produces:
+# ❌ infinite/non-computable result
+
+Example:
+
+```text
+{ t | ¬Students(t) }
+```
+
+---
+
+# 🔥 Why Safety Matters?
+
+DBMS must:
+# ✅ guarantee finite results
+
+---
+
+# 🔥 Relational Calculus vs SQL
+
+| Relational Calculus | SQL |
+|---|---|
+| Logic-based | Declarative |
+| WHAT-oriented | WHAT-oriented |
+| Predicate logic | Query language |
+
+---
+
+# 🧠 Example Mapping
+
+TRC:
+
+```text
+{ t | Students(t) ∧ t.Marks > 80 }
+```
+
+SQL:
+
+```sql
+SELECT *
+FROM Students
+WHERE Marks > 80;
+```
+
+---
+
+# 🔥 Relational Calculus vs Relational Algebra
+
+| Feature | Relational Calculus | Relational Algebra |
+|---|---|---|
+| Type | Non-procedural | Procedural |
+| Focus | WHAT | HOW |
+| Uses Logic | Yes | No |
+| Uses Operators | No | Yes |
+| Uses Quantifiers | Yes | No |
+
+---
+
+# 🎯 FAANG INTERVIEW QUESTIONS
+
+---
+
+## Q1. What is Relational Calculus?
+
+✔ Non-procedural query language based on predicate logic.
+
+---
+
+## Q2. Difference between TRC and DRC?
+
+✔ TRC → tuple variables  
+✔ DRC → domain variables
+
+---
+
+## Q3. Difference between Relational Algebra and Relational Calculus?
+
+✔ Algebra tells HOW  
+✔ Calculus tells WHAT
+
+---
+
+## Q4. What is free variable?
+
+✔ variable appearing in output
+
+---
+
+## Q5. What is bound variable?
+
+✔ variable controlled by quantifier
+
+---
+
+## Q6. What does ∃ mean?
+
+✔ There exists
+
+---
+
+## Q7. What does ∀ mean?
+
+✔ For all
+
+---
+
+## Q8. Why are unsafe expressions dangerous?
+
+✔ infinite/non-computable results
+
+---
+
+## Q9. Is SQL closer to Algebra or Calculus?
+
+✔ Calculus
+
+---
+
+## Q10. Why is relational calculus important?
+
+✔ foundation of declarative query systems
+
+---
+
+# 🔥 PRACTICE QUESTIONS
+
+---
+
+# 🟢 Easy Level
+
+---
+
+## Q1
+Write TRC query to find students with marks > 80.
+
+### ✔ Answer
+
+```text
+{ t | Students(t) ∧ t.Marks > 80 }
+```
+
+---
+
+## Q2
+Write DRC query to find names of students with marks > 80.
+
+### ✔ Answer
+
+```text
+{ <n> | ∃i ∃m (Students(i,n,m) ∧ m > 80) }
+```
+
+---
+
+# 🟡 Medium Level
+
+---
+
+## Q3
+Write TRC query to find students from Bhopal.
+
+### ✔ Answer
+
+```text
+{ t | Students(t) ∧ t.City = "Bhopal" }
+```
+
+---
+
+## Q4
+Write DRC query to find names of students from Delhi.
+
+### ✔ Answer
+
+```text
+{ <n> | ∃c (Students(n,c) ∧ c = "Delhi") }
+```
+
+---
+
+# 🔴 Hard Level
+
+---
+
+## Q5
+Find students enrolled in ALL required courses.
+
+### ✔ Concept Used
+
+```text
+∀ (FOR ALL)
+```
+
+---
+
+## Q6
+Explain unsafe expression with example.
+
+### ✔ Answer
+
+```text
+{ t | ¬Students(t) }
+```
+
+Produces infinite result.
+
+---
+
+# 🔥 FAANG-LEVEL CONCEPTUAL QUESTIONS
+
+---
+
+## Q7
+Why is SQL considered declarative?
+
+### ✔ Answer
+
+Because user specifies WHAT data is required, not HOW to retrieve it.
+
+---
+
+## Q8
+Why are quantifiers important?
+
+### ✔ Answer
+
+They enable:
+- universal conditions
+- existence checking
+- division-type logic
+
+---
+
+## Q9
+Why is DRC harder than TRC?
+
+### ✔ Answer
+
+Because DRC works at attribute-value level and requires more detailed variable handling.
+
+---
+
+# 🔥 FINAL INTUITION TABLE
+
+| Concept | Think Like |
+|---|---|
+| TRC | entire row |
+| DRC | individual values |
+| ∃ | at least one |
+| ∀ | every |
+| ∧ | AND |
+| ∨ | OR |
+| ¬ | NOT |
+
+---
+
+# 🚀 FINAL SUMMARY
+
+Relational Calculus:
+✔ non-procedural  
+✔ based on predicate logic  
+✔ specifies WHAT data is needed  
+✔ has two forms → TRC and DRC  
+✔ uses quantifiers and logical operators  
+✔ foundation of SQL and declarative query systems
