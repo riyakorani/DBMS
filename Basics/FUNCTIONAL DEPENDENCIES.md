@@ -650,3 +650,5 @@ Understand:
 | Distributed Transactions | distributed consistency |
 
 ---
+
+
